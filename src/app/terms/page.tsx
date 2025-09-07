@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Terms of Service - DeerRepellent.store',
@@ -12,7 +13,7 @@ export default function TermsPage() {
       <div className="bg-gray-50 py-4">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="flex items-center space-x-2 text-sm text-gray-600">
-            <a href="/" className="hover:text-green-600">Home</a>
+            <Link href="/" className="hover:text-green-600">Home</Link>
             <span>/</span>
             <span className="text-gray-900">Terms of Service</span>
           </nav>
