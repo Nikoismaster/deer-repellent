@@ -1,4 +1,3 @@
-
 import Link from 'next/link';
 import { Shield, Sun, Droplets, Volume2, Clock, CheckCircle, Star, ArrowRight } from 'lucide-react';
 import CTAButton from '@/components/UI/CTAButton';
@@ -82,52 +81,52 @@ export default function HomePage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-green-50 to-green-100 py-20">
+      <section className="relative bg-gradient-to-br from-green-50 to-green-100 py-12 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="order-2 lg:order-1">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight">
                 Protect Your Garden{' '}
                 <span className="text-green-600">24/7</span> with Solar-Powered Deer Repellent
               </h1>
-              <p className="text-xl text-gray-700 mt-6 leading-relaxed">
+              <p className="text-lg sm:text-xl text-gray-700 mt-4 sm:mt-6 leading-relaxed">
                 Effective, humane & eco-friendly wildlife control. Our ultrasonic deer deterrent 
                 uses solar power and motion activation to keep deer away from your plants naturally.
               </p>
               
               {/* Key Benefits */}
-              <div className="mt-8 space-y-3">
+              <div className="mt-6 sm:mt-8 space-y-3">
                 <div className="flex items-center text-gray-700">
-                  <CheckCircle className="h-5 w-5 text-green-600 mr-3" />
+                  <CheckCircle className="h-5 w-5 text-green-600 mr-3 flex-shrink-0" />
                   <span>95% Success Rate - Proven Effective</span>
                 </div>
                 <div className="flex items-center text-gray-700">
-                  <CheckCircle className="h-5 w-5 text-green-600 mr-3" />
+                  <CheckCircle className="h-5 w-5 text-green-600 mr-3 flex-shrink-0" />
                   <span>Solar Powered - Zero Operating Costs</span>
                 </div>
                 <div className="flex items-center text-gray-700">
-                  <CheckCircle className="h-5 w-5 text-green-600 mr-3" />
+                  <CheckCircle className="h-5 w-5 text-green-600 mr-3 flex-shrink-0" />
                   <span>Humane & Safe for Pets and Children</span>
                 </div>
               </div>
 
               {/* CTA Buttons */}
-              <div className="mt-10 flex flex-col sm:flex-row gap-4">
+              <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-4">
                 <CTAButton variant="single" size="large" />
                 <CTAButton variant="double" size="large" className="bg-yellow-600 hover:bg-yellow-700" />
               </div>
 
               {/* Trust Indicators */}
-              <div className="mt-8 flex items-center space-x-6">
+              <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row sm:items-center sm:space-x-6 space-y-3 sm:space-y-0">
                 <div className="flex items-center">
                   <div className="flex text-yellow-400">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-5 w-5 fill-current" />
+                      <Star key={i} className="h-4 w-4 sm:h-5 sm:w-5 fill-current" />
                     ))}
                   </div>
-                  <span className="ml-2 text-gray-700 font-medium">4.8/5 (127+ Reviews)</span>
+                  <span className="ml-2 text-gray-700 font-medium text-sm sm:text-base">4.8/5 (127+ Reviews)</span>
                 </div>
-                <div className="text-gray-700">
+                <div className="text-gray-700 text-sm sm:text-base">
                   <span className="font-medium">Free USA Shipping</span>
                 </div>
               </div>
@@ -135,18 +134,15 @@ export default function HomePage() {
 
             <div className="order-1 lg:order-2">
               <div className="relative">
-                {/* 使用占位符图片 */}
-                <div className="w-[600px] h-[400px] bg-green-200 rounded-2xl shadow-2xl flex items-center justify-center">
-                  <div className="text-center text-green-800">
-                    <Volume2 className="h-16 w-16 mx-auto mb-4" />
-                    <div className="text-lg font-semibold">Solar Deer Repellent</div>
-                    <div className="text-sm">Product Image Coming Soon</div>
-                  </div>
-                </div>
-                <div className="absolute -bottom-6 -right-6 bg-white rounded-lg shadow-lg p-4">
+                {/* 主产品图片 */}
+                <img 
+                  src="https://m.media-amazon.com/images/I/818jcIp9unL._AC_SL1500_.jpg"
+                  alt="Solar Powered Deer Repellent Device"
+                  className="w-full h-auto rounded-2xl shadow-2xl"
+                />                <div className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 bg-white rounded-lg shadow-lg p-3 sm:p-4">
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-green-600">30 Day</div>
-                    <div className="text-sm text-gray-700">Money Back Guarantee</div>
+                    <div className="text-xl sm:text-2xl font-bold text-green-600">30 Day</div>
+                    <div className="text-xs sm:text-sm text-gray-700">Money Back Guarantee</div>
                   </div>
                 </div>
               </div>
@@ -156,25 +152,25 @@ export default function HomePage() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-white">
+      <section className="py-12 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
               Why Choose Our Deer Repellent?
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
               Advanced technology meets eco-friendly design for the most effective deer control solution
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow duration-200">
+              <div key={index} className="bg-gray-50 rounded-xl p-6 sm:p-8 hover:shadow-lg transition-shadow duration-200">
                 <div className="flex items-center mb-4">
                   <div className="bg-green-100 rounded-lg p-3">
                     <feature.icon className="h-6 w-6 text-green-600" />
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 ml-4">{feature.title}</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-gray-900 ml-4">{feature.title}</h3>
                 </div>
                 <p className="text-gray-700 leading-relaxed">{feature.description}</p>
               </div>
@@ -184,13 +180,13 @@ export default function HomePage() {
       </section>
 
       {/* How It Works Section */}
-      <section className="py-20 bg-green-50">
+      <section className="py-12 sm:py-20 bg-green-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
               How It Works
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-lg sm:text-xl text-gray-600">
               Simple 3-step process for effective deer deterrence
             </p>
           </div>
@@ -198,19 +194,19 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {workingProcess.map((process, index) => (
               <div key={index} className="text-center">
-                <div className="bg-green-600 text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-6">
+                <div className="bg-green-600 text-white rounded-full w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center text-xl sm:text-2xl font-bold mx-auto mb-6">
                   {process.step}
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">{process.title}</h3>
+                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-4">{process.title}</h3>
                 <p className="text-gray-700">{process.description}</p>
                 {index < workingProcess.length - 1 && (
-                  <ArrowRight className="h-8 w-8 text-green-600 mx-auto mt-8 hidden md:block" />
+                  <ArrowRight className="h-6 w-6 sm:h-8 sm:w-8 text-green-600 mx-auto mt-6 sm:mt-8 hidden md:block" />
                 )}
               </div>
             ))}
           </div>
 
-          <div className="mt-16 text-center">
+          <div className="mt-12 sm:mt-16 text-center">
             <Link 
               href="/how-it-works"
               className="inline-flex items-center text-green-600 hover:text-green-700 font-semibold"
@@ -223,11 +219,11 @@ export default function HomePage() {
       </section>
 
       {/* Product Specifications */}
-      <section className="py-20 bg-white">
+      <section className="py-12 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div>
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
                 Technical Specifications
               </h2>
               <div className="space-y-4">
@@ -281,13 +277,14 @@ export default function HomePage() {
             </div>
 
             <div className="relative">
-              {/* 使用占位符图片 */}
-              <div className="w-[500px] h-[400px] bg-gray-200 rounded-2xl shadow-lg flex items-center justify-center">
-                <div className="text-center text-gray-600">
-                  <Shield className="h-16 w-16 mx-auto mb-4" />
-                  <div className="text-lg font-semibold">Technical Diagram</div>
-                  <div className="text-sm">Coming Soon</div>
-                </div>
+              {/* 技术图表 */}
+              <div className="relative w-full max-w-md sm:max-w-lg mx-auto rounded-2xl overflow-hidden shadow-lg bg-white p-4">
+                <img 
+                  src="https://m.media-amazon.com/images/I/81421IaGHiL._AC_SL1500_.jpg"
+                  alt="Deer Repellent Technical Specifications and Components"
+                  className="w-full h-auto object-contain"
+                  loading="lazy"
+                />
               </div>
             </div>
           </div>
@@ -295,24 +292,24 @@ export default function HomePage() {
       </section>
 
       {/* Customer Testimonials */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-12 sm:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
               Real Results from Real Customers
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-lg sm:text-xl text-gray-600">
               Join thousands of satisfied gardeners who protect their plants with our deer repellent
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white rounded-xl p-8 shadow-lg">
+              <div key={index} className="bg-white rounded-xl p-6 sm:p-8 shadow-lg">
                 <div className="flex items-center mb-4">
                   <div className="flex text-yellow-400">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="h-5 w-5 fill-current" />
+                      <Star key={i} className="h-4 w-4 sm:h-5 sm:w-5 fill-current" />
                     ))}
                   </div>
                 </div>
@@ -328,7 +325,7 @@ export default function HomePage() {
             ))}
           </div>
 
-          <div className="text-center mt-12">
+          <div className="text-center mt-8 sm:mt-12">
             <Link 
               href="/success-stories"
               className="inline-flex items-center text-green-600 hover:text-green-700 font-semibold"
@@ -341,17 +338,17 @@ export default function HomePage() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-20 bg-green-600">
+      <section className="py-12 sm:py-20 bg-green-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-6">
             Ready to Protect Your Garden?
           </h2>
-          <p className="text-xl text-green-100 mb-10">
+          <p className="text-lg sm:text-xl text-green-100 mb-8 sm:mb-10">
             Join thousands of satisfied customers and start protecting your garden today. 
             30-day money-back guarantee and free shipping included.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
             <CTAButton 
               variant="single" 
               size="large" 
@@ -364,8 +361,8 @@ export default function HomePage() {
             />
           </div>
 
-          <div className="mt-8 text-green-100">
-            <p className="text-sm">
+          <div className="mt-6 sm:mt-8 text-green-100">
+            <p className="text-xs sm:text-sm">
               ✓ Free USA Shipping • ✓ 30-Day Money Back Guarantee • ✓ 24/7 Customer Support
             </p>
           </div>
