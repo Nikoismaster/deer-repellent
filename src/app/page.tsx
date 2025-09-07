@@ -135,14 +135,14 @@ export default function HomePage() {
 
             <div className="order-1 lg:order-2">
               <div className="relative">
-                <Image
-                  src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=600&h=400&fit=crop&auto=format"
-                  alt="Solar Deer Repellent protecting garden"
-                  width={600}
-                  height={400}
-                  className="rounded-2xl shadow-2xl"
-                  priority
-                />
+                {/* 使用占位符图片 */}
+                <div className="w-[600px] h-[400px] bg-green-200 rounded-2xl shadow-2xl flex items-center justify-center">
+                  <div className="text-center text-green-800">
+                    <Volume2 className="h-16 w-16 mx-auto mb-4" />
+                    <div className="text-lg font-semibold">Solar Deer Repellent</div>
+                    <div className="text-sm">Product Image Coming Soon</div>
+                  </div>
+                </div>
                 <div className="absolute -bottom-6 -right-6 bg-white rounded-lg shadow-lg p-4">
                   <div className="text-center">
                     <div className="text-2xl font-bold text-green-600">30 Day</div>
@@ -281,13 +281,14 @@ export default function HomePage() {
             </div>
 
             <div className="relative">
-              <Image
-                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&h=400&fit=crop&auto=format"
-                alt="Deer repellent technical diagram"
-                width={500}
-                height={400}
-                className="rounded-2xl shadow-lg"
-              />
+              {/* 使用占位符图片 */}
+              <div className="w-[500px] h-[400px] bg-gray-200 rounded-2xl shadow-lg flex items-center justify-center">
+                <div className="text-center text-gray-600">
+                  <Shield className="h-16 w-16 mx-auto mb-4" />
+                  <div className="text-lg font-semibold">Technical Diagram</div>
+                  <div className="text-sm">Coming Soon</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -354,12 +355,12 @@ export default function HomePage() {
             <CTAButton 
               variant="single" 
               size="large" 
-              className="bg-white text-green-600 hover:bg-gray-100 hover:text-green-700" 
+              className="!bg-white !text-green-600 hover:!bg-gray-100 hover:!text-green-700 font-bold" 
             />
             <CTAButton 
               variant="double" 
               size="large" 
-              className="bg-yellow-500 hover:bg-yellow-600" 
+              className="!bg-yellow-500 hover:!bg-yellow-600 !text-white font-bold" 
             />
           </div>
 

@@ -1,0 +1,641 @@
+import type { Metadata } from 'next';
+import Image from 'next/image';
+import Link from 'next/link';
+import { Calendar, Clock, User, ArrowLeft, ArrowRight, Tag, Share2 } from 'lucide-react';
+import CTAButton from '@/components/UI/CTAButton';
+
+// 这个函数在实际应用中会从CMS或数据库获取文章数据
+async function getArticle(slug: string) {
+  // 示例文章数据
+  const articles: Record<string, any> = {
+    'ultimate-guide-deer-control': {
+      id: 'ultimate-guide-deer-control',
+      title: 'The Ultimate Guide to Deer Control: 7 Proven Methods That Actually Work',
+      excerpt: 'Discover the most effective deer control methods based on scientific research and real-world testing.',
+      content: `
+# The Ultimate Guide to Deer Control: 7 Proven Methods That Actually Work
+
+Deer damage to gardens and landscaping costs homeowners millions of dollars annually. If you've found yourself frustrated by nibbled hostas, decimated vegetable gardens, or stripped fruit trees, you're not alone. The good news? There are proven, effective methods to protect your property.
+
+## Understanding the Problem
+
+Before diving into solutions, it's crucial to understand why deer are attracted to your property and what makes certain areas more vulnerable than others.
+
+### Why Deer Choose Your Garden
+
+Deer are creatures of habit and opportunity. They're drawn to areas that provide:
+
+- **Easy food sources** - Tender plants, vegetables, and flowers
+- **Water access** - Irrigation systems, ponds, or natural water sources
+- **Safe corridors** - Paths between feeding areas and shelter
+- **Minimal threats** - Quiet areas with little human activity
+
+### Peak Activity Times
+
+Understanding when deer are most active helps you implement more effective deterrent strategies:
+
+- **Dawn (5-7 AM)** - Primary feeding time
+- **Dusk (6-8 PM)** - Secondary feeding period
+- **Night hours** - Continued foraging in safe areas
+- **Seasonal variations** - Increased activity during mating season (fall) and harsh weather
+
+## Method 1: Ultrasonic Deer Repellents
+
+**Effectiveness Rating: 90-95%**
+
+Ultrasonic deer repellents represent the cutting edge of humane wildlife control technology. These devices emit high-frequency sound waves (typically 20-25kHz) that are uncomfortable for deer but inaudible to humans.
+
+### How Ultrasonic Repellents Work
+
+The science behind ultrasonic deterrents is based on deer's acute hearing sensitivity. Deer can hear frequencies up to 30kHz, while human hearing typically maxes out at 20kHz. The 25kHz frequency creates an "acoustic barrier" that deer naturally avoid.
+
+### Key Advantages
+
+- **Humane and safe** - No harm to animals, children, or pets
+- **Weather resistant** - Most models feature IP65 waterproof ratings
+- **Solar powered** - Modern units require no electricity or battery changes
+- **Large coverage** - Can protect up to 2,600 square feet per unit
+- **Multi-modal deterrent** - Many combine ultrasonic sound with LED flashes
+
+### Installation Best Practices
+
+For maximum effectiveness:
+
+1. **Height**: Install 3-4 feet above ground level
+2. **Angle**: Face toward the area you want to protect
+3. **Clearance**: Ensure no obstacles block the sensor
+4. **Solar exposure**: Position panel for 4+ hours of daily sunlight
+
+## Method 2: Physical Barriers
+
+**Effectiveness Rating: 95-100%**
+
+Physical barriers provide the most reliable protection but come with aesthetic and cost considerations.
+
+### Fencing Options
+
+- **8-foot tall fencing** - Minimum height to prevent deer jumping
+- **Electric fencing** - Lower cost, effective with proper installation
+- **Netting** - Temporary protection for specific plants or areas
+- **Tree guards** - Individual protection for valuable trees and shrubs
+
+### Pros and Cons
+
+**Advantages:**
+- Nearly 100% effective when properly installed
+- Permanent solution
+- No ongoing maintenance costs
+
+**Disadvantages:**
+- High upfront installation costs
+- May obstruct views and aesthetics
+- Requires regular inspection and maintenance
+- Not practical for large properties
+
+## Method 3: Chemical Repellents
+
+**Effectiveness Rating: 60-70%**
+
+Chemical repellents work by making plants taste or smell unpleasant to deer. While less effective than physical barriers or ultrasonic devices, they can be useful in specific situations.
+
+### Types of Chemical Repellents
+
+- **Scent-based** - Predator urine, soap, human hair
+- **Taste-based** - Bitter compounds applied to plants
+- **Commercial sprays** - Ready-to-use formulations
+- **Homemade solutions** - DIY recipes using household items
+
+### Application Guidelines
+
+- **Reapply regularly** - Rain and irrigation wash away treatments
+- **Rotate products** - Deer can become accustomed to specific scents
+- **Apply before damage** - Prevention is more effective than reaction
+- **Follow label instructions** - Ensure food safety for edible plants
+
+## Method 4: Habitat Modification
+
+**Effectiveness Rating: 70-80%**
+
+Making your property less attractive to deer can significantly reduce damage without ongoing costs.
+
+### Landscaping Strategies
+
+- **Remove attractants** - Replace preferred plants with deer-resistant varieties
+- **Eliminate water sources** - Fix leaky irrigation, remove standing water
+- **Create barriers** - Use thorny plants as natural deterrents
+- **Increase human activity** - Frequent areas deer typically use
+
+### Deer-Resistant Plant Selection
+
+Plants deer typically avoid:
+- **Herbs**: Rosemary, thyme, oregano, lavender
+- **Flowers**: Marigolds, snapdragons, zinnias
+- **Shrubs**: Barberry, juniper, spirea
+- **Trees**: Pine, spruce, oak varieties
+
+## Method 5: Motion-Activated Deterrents
+
+**Effectiveness Rating: 75-85%**
+
+Motion-activated devices startle deer with sudden light, sound, or water spray when they enter protected areas.
+
+### Types of Motion Deterrents
+
+- **Sprinkler systems** - Sudden water spray
+- **Light-based** - Bright flashing LEDs
+- **Sound devices** - Loud noises or recorded sounds
+- **Combination units** - Multiple deterrent methods in one device
+
+### Installation Considerations
+
+- **Placement height** - Position to detect deer-sized movement
+- **Power source** - Solar, battery, or electrical connection
+- **Weather protection** - Ensure devices function in all conditions
+- **Adjustment sensitivity** - Prevent false triggers from small animals
+
+## Method 6: Natural Predator Deterrents
+
+**Effectiveness Rating: 65-75%**
+
+Simulating the presence of natural predators can discourage deer from entering your property.
+
+### Predator Scent Products
+
+- **Coyote urine** - Most effective natural predator scent
+- **Wolf urine** - Strong deterrent but expensive
+- **Bobcat urine** - Effective for smaller properties
+- **Commercial predator scents** - Convenient but less potent
+
+### Application Methods
+
+- **Scent stations** - Strategic placement around property perimeter
+- **Spray applications** - Direct application to vulnerable plants
+- **Scent wicks** - Long-lasting dispersal method
+- **Granular products** - Easy application around garden beds
+
+## Method 7: Timing and Maintenance Strategies
+
+**Effectiveness Rating: 50-60% (when used alone)**
+
+Understanding deer behavior patterns and maintaining consistent deterrent efforts significantly improves overall success rates.
+
+### Seasonal Considerations
+
+**Spring**
+- Implement protection before new growth appears
+- Focus on young, tender plants
+- Increase deterrent frequency during peak growth
+
+**Summer**
+- Maintain consistent protection
+- Adjust for changing plant palatability
+- Monitor for new deer trails and feeding areas
+
+**Fall**
+- Prepare for increased deer activity during mating season
+- Protect valuable landscape investments
+- Plan winter protection strategies
+
+**Winter**
+- Focus on protecting evergreens and woody plants
+- Adjust ultrasonic devices for cold weather operation
+- Remove snow from solar panels regularly
+
+## Combining Methods for Maximum Effectiveness
+
+The most successful deer control strategies combine multiple methods:
+
+### Recommended Combinations
+
+**For Small Properties (under 1 acre):**
+- Primary: Ultrasonic repellent system
+- Secondary: Deer-resistant landscaping
+- Backup: Motion-activated deterrents
+
+**For Large Properties (1+ acres):**
+- Primary: Multiple ultrasonic units with overlapping coverage
+- Secondary: Strategic fencing around high-value areas
+- Tertiary: Habitat modification and resistant plant selection
+
+**For High-Pressure Areas:**
+- Primary: Physical barriers around most valuable plants
+- Secondary: Ultrasonic deterrent system
+- Tertiary: Regular application of scent deterrents
+
+## Cost-Benefit Analysis
+
+Understanding the long-term costs helps justify initial investments:
+
+### Initial Investment Comparison
+
+| Method | Initial Cost | Annual Maintenance | 5-Year Total |
+|--------|-------------|-------------------|--------------|
+| Ultrasonic System | $150-300 | $0 | $150-300 |
+| Physical Fencing | $15-25/linear foot | $50-100 | $1,500-2,500 |
+| Chemical Repellents | $30-50 | $200-400 | $1,030-2,050 |
+| Motion Deterrents | $100-200 | $25-50 | $225-450 |
+
+### Value Protection
+
+Consider the replacement cost of damaged plants:
+- **Mature trees**: $500-2,000+ each
+- **Established shrubs**: $50-300 each
+- **Vegetable gardens**: $200-500 annual crop value
+- **Flower beds**: $100-500 annual replanting costs
+
+## Monitoring and Adjustment
+
+Successful deer control requires ongoing assessment and adaptation:
+
+### Signs of Deer Activity
+
+- **Hoof prints** - Distinctive cloven tracks in soft soil
+- **Droppings** - Small, oval pellets clustered together
+- **Browse lines** - Plants eaten to uniform height
+- **Rubs** - Bark damage from antler rubbing
+- **Beds** - Flattened areas where deer rest
+
+### Effectiveness Indicators
+
+- **Reduced damage** - Less plant material consumed
+- **Behavior changes** - Deer avoiding previously frequented areas
+- **Trail abandonment** - Unused paths through property
+- **Increased alertness** - Deer appearing more cautious when spotted
+
+## Troubleshooting Common Issues
+
+### Low Effectiveness
+
+If your chosen method isn't working:
+
+1. **Check placement** - Ensure proper positioning and coverage
+2. **Verify operation** - Test devices and replace batteries
+3. **Assess deer pressure** - High populations may require multiple methods
+4. **Consider habituation** - Switch methods or locations periodically
+
+### Seasonal Challenges
+
+**Winter snow** can affect device operation:
+- Clear snow from solar panels weekly
+- Adjust sensor angles for snow cover
+- Consider supplemental charging during extended cloudy periods
+
+**Heavy rain** may reduce chemical deterrent effectiveness:
+- Increase application frequency during wet seasons
+- Choose waterproof formulations
+- Focus on scent-based rather than taste-based products
+
+## Long-Term Success Strategies
+
+### Consistency is Key
+
+Deer control success depends on:
+- **Regular monitoring** - Weekly inspection of protected areas
+- **Prompt maintenance** - Quick repair of damaged deterrents
+- **Seasonal adjustments** - Adapting methods for changing conditions
+- **Community coordination** - Working with neighbors for area-wide effectiveness
+
+### Sustainable Approaches
+
+Focus on methods that provide long-term benefits:
+- **Native plant selection** - Choose naturally deer-resistant species
+- **Habitat improvement** - Encourage natural predator populations
+- **Education** - Learn about local deer behavior patterns
+- **Technology adoption** - Invest in reliable, low-maintenance solutions
+
+## Conclusion
+
+Effective deer control requires understanding deer behavior, selecting appropriate methods for your specific situation, and maintaining consistent implementation. While no single method is 100% effective in all situations, combining proven techniques creates a comprehensive defense system.
+
+For most homeowners, ultrasonic deer repellents offer the best balance of effectiveness, cost, and convenience. When properly installed and maintained, these systems provide reliable, humane protection without ongoing costs or environmental concerns.
+
+Remember that deer control is an ongoing process, not a one-time solution. Success comes from persistent, informed implementation of proven strategies adapted to your specific property and local deer population.
+
+*Ready to protect your garden? Our solar-powered ultrasonic deer repellent system offers 95% effectiveness with zero ongoing costs. Get started today with our 30-day money-back guarantee.*
+      `,
+      image: 'https://images.unsplash.com/photo-1551993005-75c4131b6bd8?w=800&h=400&fit=crop&auto=format',
+      category: 'Deer Control',
+      readTime: '12 min read',
+      publishDate: '2024-03-15',
+      author: 'Dr. Sarah Wilson',
+      tags: ['deer control', 'garden protection', 'ultrasonic repellent', 'wildlife management']
+    }
+  };
+
+  return articles[slug] || null;
+}
+
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+  const article = await getArticle(params.slug);
+  
+  if (!article) {
+    return {
+      title: 'Article Not Found',
+    };
+  }
+
+  return {
+    title: `${article.title} | DeerRepellent.store Blog`,
+    description: article.excerpt,
+    keywords: article.tags,
+    openGraph: {
+      title: article.title,
+      description: article.excerpt,
+      images: [article.image],
+      type: 'article',
+      publishedTime: article.publishDate,
+      authors: [article.author],
+    },
+  };
+}
+
+export default async function BlogArticlePage({ params }: { params: { slug: string } }) {
+  const article = await getArticle(params.slug);
+
+  if (!article) {
+    return (
+      <div className="min-h-screen bg-white flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">Article Not Found</h1>
+          <p className="text-gray-600 mb-8">The article you're looking for doesn't exist.</p>
+          <Link href="/blog" className="text-green-600 hover:text-green-700 font-semibold">
+            ← Back to Blog
+          </Link>
+        </div>
+      </div>
+    );
+  }
+
+  const formatDate = (dateString: string) => {
+    return new Date(dateString).toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+  };
+
+  const relatedArticles = [
+    {
+      id: 'deer-feeding-patterns',
+      title: 'Understanding Deer Feeding Patterns: When They\'re Most Active',
+      image: 'https://images.unsplash.com/photo-1551993005-75c4131b6bd8?w=300&h=200&fit=crop&auto=format'
+    },
+    {
+      id: 'solar-deer-repellent-vs-battery',
+      title: 'Solar vs Battery-Powered Deer Repellents: Complete Comparison',
+      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=300&h=200&fit=crop&auto=format'
+    },
+    {
+      id: 'deer-resistant-plants',
+      title: 'Creating a Deer-Resistant Garden: Plants They Naturally Avoid',
+      image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=300&h=200&fit=crop&auto=format'
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-white">
+      {/* Breadcrumb */}
+      <div className="bg-gray-50 py-4">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <nav className="flex items-center space-x-2 text-sm text-gray-600">
+            <a href="/" className="hover:text-green-600">Home</a>
+            <span>/</span>
+            <a href="/blog" className="hover:text-green-600">Blog</a>
+            <span>/</span>
+            <span className="text-gray-900">{article.category}</span>
+          </nav>
+        </div>
+      </div>
+
+      {/* Article Header */}
+      <article className="py-12">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Back to Blog */}
+          <Link href="/blog" className="inline-flex items-center text-green-600 hover:text-green-700 font-medium mb-8">
+            <ArrowLeft className="h-4 w-4 mr-2" />
+            Back to Blog
+          </Link>
+
+          {/* Article Meta */}
+          <div className="mb-8">
+            <div className="flex items-center space-x-4 text-sm text-gray-600 mb-4">
+              <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full font-medium">
+                {article.category}
+              </span>
+              <div className="flex items-center">
+                <Calendar className="h-4 w-4 mr-1" />
+                {formatDate(article.publishDate)}
+              </div>
+              <div className="flex items-center">
+                <Clock className="h-4 w-4 mr-1" />
+                {article.readTime}
+              </div>
+            </div>
+
+            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 leading-tight mb-6">
+              {article.title}
+            </h1>
+
+            <div className="flex items-center justify-between">
+              <div className="flex items-center">
+                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                  <User className="h-6 w-6 text-green-600" />
+                </div>
+                <div>
+                  <div className="font-semibold text-gray-900">{article.author}</div>
+                  <div className="text-sm text-gray-600">Wildlife Specialist</div>
+                </div>
+              </div>
+
+              <div className="flex items-center space-x-3">
+                <button className="p-2 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors">
+                  <Share2 className="h-5 w-5 text-gray-600" />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Featured Image */}
+          <div className="relative h-64 sm:h-96 mb-12 rounded-2xl overflow-hidden">
+            <Image
+              src={article.image}
+              alt={article.title}
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
+
+          {/* Article Content */}
+          <div className="prose prose-lg max-w-none">
+            <div className="text-xl text-gray-700 leading-relaxed mb-8 p-6 bg-green-50 rounded-xl border-l-4 border-green-500">
+              {article.excerpt}
+            </div>
+
+            {/* Content sections would be rendered here */}
+            <div className="space-y-8">
+              <section>
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">Understanding the Problem</h2>
+                <p className="text-gray-700 leading-relaxed mb-6">
+                  Before diving into solutions, it's crucial to understand why deer are attracted to your property 
+                  and what makes certain areas more vulnerable than others.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-gray-900 mb-4">Why Deer Choose Your Garden</h3>
+                <p className="text-gray-700 leading-relaxed mb-4">
+                  Deer are creatures of habit and opportunity. They're drawn to areas that provide:
+                </p>
+                <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-6">
+                  <li><strong>Easy food sources</strong> - Tender plants, vegetables, and flowers</li>
+                  <li><strong>Water access</strong> - Irrigation systems, ponds, or natural water sources</li>
+                  <li><strong>Safe corridors</strong> - Paths between feeding areas and shelter</li>
+                  <li><strong>Minimal threats</strong> - Quiet areas with little human activity</li>
+                </ul>
+              </section>
+
+              <section>
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">Method 1: Ultrasonic Deer Repellents</h2>
+                <div className="bg-green-50 border border-green-200 rounded-xl p-6 mb-6">
+                  <div className="flex items-center mb-4">
+                    <div className="bg-green-600 text-white px-3 py-1 rounded-full text-sm font-bold mr-3">
+                      Effectiveness: 90-95%
+                    </div>
+                    <span className="text-green-800 font-semibold">Recommended Solution</span>
+                  </div>
+                  <p className="text-green-800">
+                    Ultrasonic deer repellents represent the cutting edge of humane wildlife control technology. 
+                    These devices emit high-frequency sound waves (typically 20-25kHz) that are uncomfortable 
+                    for deer but inaudible to humans.
+                  </p>
+                </div>
+
+                <h3 className="text-2xl font-semibold text-gray-900 mb-4">How Ultrasonic Repellents Work</h3>
+                <p className="text-gray-700 leading-relaxed mb-6">
+                  The science behind ultrasonic deterrents is based on deer's acute hearing sensitivity. 
+                  Deer can hear frequencies up to 30kHz, while human hearing typically maxes out at 20kHz. 
+                  The 25kHz frequency creates an "acoustic barrier" that deer naturally avoid.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-gray-900 mb-4">Key Advantages</h3>
+                <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-6">
+                  <li><strong>Humane and safe</strong> - No harm to animals, children, or pets</li>
+                  <li><strong>Weather resistant</strong> - Most models feature IP65 waterproof ratings</li>
+                  <li><strong>Solar powered</strong> - Modern units require no electricity or battery changes</li>
+                  <li><strong>Large coverage</strong> - Can protect up to 2,600 square feet per unit</li>
+                  <li><strong>Multi-modal deterrent</strong> - Many combine ultrasonic sound with LED flashes</li>
+                </ul>
+              </section>
+
+              {/* CTA Section within content */}
+              <div className="bg-gradient-to-r from-green-600 to-green-700 rounded-2xl p-8 text-white text-center my-12">
+                <h3 className="text-2xl font-bold mb-4">Ready to Protect Your Garden?</h3>
+                <p className="text-green-100 mb-6">
+                  Our solar-powered ultrasonic deer repellent offers 95% effectiveness with zero ongoing costs.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <CTAButton 
+                    variant="single" 
+                    className="!bg-white !text-green-600 hover:!bg-gray-100 hover:!text-green-700 font-bold"
+                  />
+                  <CTAButton 
+                    variant="double" 
+                    className="!bg-yellow-500 hover:!bg-yellow-600 !text-white font-bold"
+                  />
+                </div>
+              </div>
+
+              <section>
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">Conclusion</h2>
+                <p className="text-gray-700 leading-relaxed mb-6">
+                  Effective deer control requires understanding deer behavior, selecting appropriate methods for 
+                  your specific situation, and maintaining consistent implementation. While no single method is 
+                  100% effective in all situations, combining proven techniques creates a comprehensive defense system.
+                </p>
+                <p className="text-gray-700 leading-relaxed mb-6">
+                  For most homeowners, ultrasonic deer repellents offer the best balance of effectiveness, cost, 
+                  and convenience. When properly installed and maintained, these systems provide reliable, humane 
+                  protection without ongoing costs or environmental concerns.
+                </p>
+                <p className="text-gray-700 leading-relaxed">
+                  Remember that deer control is an ongoing process, not a one-time solution. Success comes from 
+                  persistent, informed implementation of proven strategies adapted to your specific property and 
+                  local deer population.
+                </p>
+              </section>
+            </div>
+          </div>
+
+          {/* Article Tags */}
+          <div className="mt-12 pt-8 border-t border-gray-200">
+            <div className="flex items-center flex-wrap gap-2">
+              <Tag className="h-5 w-5 text-gray-600 mr-2" />
+              {article.tags.map((tag: string) => (
+                <span key={tag} className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </article>
+
+      {/* Related Articles */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Related Articles</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {relatedArticles.map((relatedArticle) => (
+              <Link key={relatedArticle.id} href={`/blog/${relatedArticle.id}`}>
+                <div className="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition-shadow cursor-pointer">
+                  <div className="relative h-48">
+                    <Image
+                      src={relatedArticle.image}
+                      alt={relatedArticle.title}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-3 leading-tight">
+                      {relatedArticle.title}
+                    </h3>
+                    <div className="flex items-center text-green-600 font-medium">
+                      Read Article
+                      <ArrowRight className="h-4 w-4 ml-2" />
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="py-16 bg-green-600">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">
+            Start Protecting Your Garden Today
+          </h2>
+          <p className="text-xl text-green-100 mb-10">
+            Don't let deer destroy your hard work. Get professional-grade protection 
+            with our solar-powered ultrasonic deer repellent system.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <CTAButton 
+              variant="single" 
+              size="large" 
+              className="!bg-white !text-green-600 hover:!bg-gray-100 hover:!text-green-700 font-bold"
+            />
+            <CTAButton 
+              variant="double" 
+              size="large" 
+              className="!bg-yellow-500 hover:!bg-yellow-600 !text-white font-bold"
+            />
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
