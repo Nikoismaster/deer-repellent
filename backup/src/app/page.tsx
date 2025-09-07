@@ -1,4 +1,4 @@
-
+import Image from 'next/image';
 import Link from 'next/link';
 import { Shield, Sun, Droplets, Volume2, Clock, CheckCircle, Star, ArrowRight } from 'lucide-react';
 import CTAButton from '@/components/UI/CTAButton';
@@ -317,7 +317,7 @@ export default function HomePage() {
                   </div>
                 </div>
                 <blockquote className="text-gray-700 mb-6 italic">
-                  &quot;{testimonial.comment}&quot;
+                  "{testimonial.comment}"
                 </blockquote>
                 <div className="border-t border-gray-200 pt-4">
                   <div className="font-semibold text-gray-900">{testimonial.name}</div>

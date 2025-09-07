@@ -5,25 +5,10 @@ const nextConfig = {
     
     // 图片优化配置
     images: {
-      remotePatterns: [
-        {
-          protocol: 'https',
-          hostname: 'images.unsplash.com',
-          port: '',
-          pathname: '/**',
-        },
-        {
-          protocol: 'https',
-          hostname: 'via.placeholder.com',
-          port: '',
-          pathname: '/**',
-        },
-        {
-          protocol: 'https',
-          hostname: 'res.cloudinary.com',
-          port: '',
-          pathname: '/**',
-        }
+      domains: [
+        'images.unsplash.com',
+        'via.placeholder.com',
+        'res.cloudinary.com'
       ],
       formats: ['image/webp', 'image/avif'],
       deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],

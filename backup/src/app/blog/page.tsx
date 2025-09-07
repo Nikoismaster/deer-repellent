@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Calendar, Clock, ArrowRight, User, TrendingUp } from 'lucide-react';
+import { Calendar, Clock, ArrowRight, Tag, User, TrendingUp } from 'lucide-react';
 import CTAButton from '@/components/UI/CTAButton';
 
 export const metadata: Metadata = {
@@ -122,7 +122,7 @@ export default function BlogPage() {
       <div className="bg-gray-50 py-4">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="flex items-center space-x-2 text-sm text-gray-600">
-            <Link href="/" className="hover:text-green-600">Home</Link>
+            <a href="/" className="hover:text-green-600">Home</a>
             <span>/</span>
             <span className="text-gray-900">Blog</span>
           </nav>

@@ -325,8 +325,8 @@ Remember that deer control is an ongoing process, not a one-time solution. Succe
   return articles[slug] || null;
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
-  const resolvedParams = await params; const article = await getArticle(resolvedParams.slug);
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+  const article = await getArticle(params.slug);
   
   if (!article) {
     return {
@@ -349,8 +349,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   };
 }
 
-export default async function BlogArticlePage({ params }: { params: Promise<{ slug: string }> }) {
-  const resolvedParams = await params; const article = await getArticle(resolvedParams.slug);
+export default async function BlogArticlePage({ params }: { params: { slug: string } }) {
+  const article = await getArticle(params.slug);
 
   if (!article) {
     return (

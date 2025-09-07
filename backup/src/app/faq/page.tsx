@@ -1,8 +1,8 @@
 'use client';
-import Link from 'next/link';
 
+import type { Metadata } from 'next';
 import { useState } from 'react';
-import { ChevronDown, Shield, Clock, Zap, Sun } from 'lucide-react';
+import { ChevronDown, Shield, Clock, Zap, Volume2, Sun, Droplets } from 'lucide-react';
 import CTAButton from '@/components/UI/CTAButton';
 
 // FAQ Accordion Component
@@ -70,7 +70,7 @@ export default function FAQPage() {
         },
         {
           question: "Will deer get used to the ultrasonic sound over time?",
-          answer: "Our device uses variable frequency output and random activation patterns to prevent habituation. The 5 different working modes ensure deer don&apos;t adapt to a consistent pattern. Additionally, the combination of ultrasonic sound and LED flash provides multiple deterrent methods."
+          answer: "Our device uses variable frequency output and random activation patterns to prevent habituation. The 5 different working modes ensure deer don't adapt to a consistent pattern. Additionally, the combination of ultrasonic sound and LED flash provides multiple deterrent methods."
         },
         {
           question: "Does it work on other animals besides deer?",
@@ -122,8 +122,8 @@ export default function FAQPage() {
           answer: "Yes! The package includes both a ground stake and wall mounting bracket. You can mount it on walls, fences, posts, or trees. Just ensure the sensor has a clear view of the protected area and the solar panel faces south for optimal charging."
         },
         {
-          question: "How do I know if it&apos;s working properly?",
-          answer: "The device has a built-in LED indicator that shows when it&apos;s activated. You can test it by walking in front of the sensor - you should see the LED flash. The ultrasonic sound is inaudible to humans, but the LED flash confirms the device is working."
+          question: "How do I know if it's working properly?",
+          answer: "The device has a built-in LED indicator that shows when it's activated. You can test it by walking in front of the sensor - you should see the LED flash. The ultrasonic sound is inaudible to humans, but the LED flash confirms the device is working."
         }
       ]
     },
@@ -136,7 +136,7 @@ export default function FAQPage() {
           answer: "The 2000mAh lithium battery provides 30+ days of operation on a full charge. With the solar panel, the device operates indefinitely in normal sunlight conditions. Even during winter or extended cloudy periods, the battery maintains operation for weeks."
         },
         {
-          question: "What happens if there&apos;s no sun for several days?",
+          question: "What happens if there's no sun for several days?",
           answer: "The large 2000mAh battery is designed for extended cloudy periods. In winter conditions with minimal sunlight, the battery can power the device for 30-45 days. You can also use the included USB cable to charge the battery if needed."
         },
         {
@@ -201,7 +201,7 @@ export default function FAQPage() {
         },
         {
           question: "What's your return policy?",
-          answer: "We offer a 30-day money-back guarantee. If you&apos;re not completely satisfied with the results, return the device for a full refund. We're confident in our product's effectiveness, which is why we can offer this guarantee."
+          answer: "We offer a 30-day money-back guarantee. If you're not completely satisfied with the results, return the device for a full refund. We're confident in our product's effectiveness, which is why we can offer this guarantee."
         },
         {
           question: "How long is the warranty?",
@@ -225,7 +225,7 @@ export default function FAQPage() {
       <div className="bg-gray-50 py-4">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="flex items-center space-x-2 text-sm text-gray-600">
-            <Link href="/" className="hover:text-green-600">Home</Link>
+            <a href="/" className="hover:text-green-600">Home</a>
             <span>/</span>
             <span className="text-gray-900">FAQ</span>
           </nav>
@@ -240,7 +240,7 @@ export default function FAQPage() {
           </h1>
           <p className="text-xl text-gray-700 mb-8">
             Get answers to common questions about our solar-powered deer repellent. 
-            Can&apos;t find what you&apos;re looking for? Contact our support team.
+            Can't find what you're looking for? Contact our support team.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <CTAButton variant="single" />

@@ -7,7 +7,7 @@ import CTAButton from '@/components/UI/CTAButton';
 // 这个函数在实际应用中会从CMS或数据库获取文章数据
 async function getArticle(slug: string) {
   // 示例文章数据
-  const articles: Record<string, { id: string; title: string; excerpt: string; content: string; image: string; category: string; readTime: string; publishDate: string; author: string; tags: string[]; }> = {
+  const articles: Record<string, any> = {
     'ultimate-guide-deer-control': {
       id: 'ultimate-guide-deer-control',
       title: 'The Ultimate Guide to Deer Control: 7 Proven Methods That Actually Work',
@@ -15,15 +15,15 @@ async function getArticle(slug: string) {
       content: `
 # The Ultimate Guide to Deer Control: 7 Proven Methods That Actually Work
 
-Deer damage to gardens and landscaping costs homeowners millions of dollars annually. If you've found yourself frustrated by nibbled hostas, decimated vegetable gardens, or stripped fruit trees, you&apos;re not alone. The good news? There are proven, effective methods to protect your property.
+Deer damage to gardens and landscaping costs homeowners millions of dollars annually. If you've found yourself frustrated by nibbled hostas, decimated vegetable gardens, or stripped fruit trees, you're not alone. The good news? There are proven, effective methods to protect your property.
 
 ## Understanding the Problem
 
-Before diving into solutions, it&apos;s crucial to understand why deer are attracted to your property and what makes certain areas more vulnerable than others.
+Before diving into solutions, it's crucial to understand why deer are attracted to your property and what makes certain areas more vulnerable than others.
 
 ### Why Deer Choose Your Garden
 
-Deer are creatures of habit and opportunity. They&apos;re drawn to areas that provide:
+Deer are creatures of habit and opportunity. They're drawn to areas that provide:
 
 - **Easy food sources** - Tender plants, vegetables, and flowers
 - **Water access** - Irrigation systems, ponds, or natural water sources
@@ -47,7 +47,7 @@ Ultrasonic deer repellents represent the cutting edge of humane wildlife control
 
 ### How Ultrasonic Repellents Work
 
-The science behind ultrasonic deterrents is based on deer's acute hearing sensitivity. Deer can hear frequencies up to 30kHz, while human hearing typically maxes out at 20kHz. The 25kHz frequency creates an &quot;acoustic barrier&quot; that deer naturally avoid.
+The science behind ultrasonic deterrents is based on deer's acute hearing sensitivity. Deer can hear frequencies up to 30kHz, while human hearing typically maxes out at 20kHz. The 25kHz frequency creates an "acoustic barrier" that deer naturally avoid.
 
 ### Key Advantages
 
@@ -325,8 +325,8 @@ Remember that deer control is an ongoing process, not a one-time solution. Succe
   return articles[slug] || null;
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
-  const resolvedParams = await params; const article = await getArticle(resolvedParams.slug);
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+  const article = await getArticle(params.slug);
   
   if (!article) {
     return {
@@ -349,15 +349,15 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   };
 }
 
-export default async function BlogArticlePage({ params }: { params: Promise<{ slug: string }> }) {
-  const resolvedParams = await params; const article = await getArticle(resolvedParams.slug);
+export default async function BlogArticlePage({ params }: { params: { slug: string } }) {
+  const article = await getArticle(params.slug);
 
   if (!article) {
     return (
       <div className="min-h-screen bg-white flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Article Not Found</h1>
-          <p className="text-gray-600 mb-8">The article you&apos;re looking for doesn&apos;t exist.</p>
+          <p className="text-gray-600 mb-8">The article you're looking for doesn't exist.</p>
           <Link href="/blog" className="text-green-600 hover:text-green-700 font-semibold">
             ← Back to Blog
           </Link>
@@ -398,9 +398,9 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
       <div className="bg-gray-50 py-4">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="flex items-center space-x-2 text-sm text-gray-600">
-            <Link href="/" className="hover:text-green-600">Home</Link>
+            <a href="/" className="hover:text-green-600">Home</a>
             <span>/</span>
-            <Link href="/blog" className="hover:text-green-600">Blog</Link>
+            <a href="/blog" className="hover:text-green-600">Blog</a>
             <span>/</span>
             <span className="text-gray-900">{article.category}</span>
           </nav>
@@ -477,13 +477,13 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
               <section>
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">Understanding the Problem</h2>
                 <p className="text-gray-700 leading-relaxed mb-6">
-                  Before diving into solutions, it&apos;s crucial to understand why deer are attracted to your property 
+                  Before diving into solutions, it's crucial to understand why deer are attracted to your property 
                   and what makes certain areas more vulnerable than others.
                 </p>
 
                 <h3 className="text-2xl font-semibold text-gray-900 mb-4">Why Deer Choose Your Garden</h3>
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  Deer are creatures of habit and opportunity. They&apos;re drawn to areas that provide:
+                  Deer are creatures of habit and opportunity. They're drawn to areas that provide:
                 </p>
                 <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-6">
                   <li><strong>Easy food sources</strong> - Tender plants, vegetables, and flowers</li>
@@ -511,9 +511,9 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
 
                 <h3 className="text-2xl font-semibold text-gray-900 mb-4">How Ultrasonic Repellents Work</h3>
                 <p className="text-gray-700 leading-relaxed mb-6">
-                  The science behind ultrasonic deterrents is based on deer&apos;s acute hearing sensitivity. 
+                  The science behind ultrasonic deterrents is based on deer's acute hearing sensitivity. 
                   Deer can hear frequencies up to 30kHz, while human hearing typically maxes out at 20kHz. 
-                  The 25kHz frequency creates an &quot;acoustic barrier&quot; that deer naturally avoid.
+                  The 25kHz frequency creates an "acoustic barrier" that deer naturally avoid.
                 </p>
 
                 <h3 className="text-2xl font-semibold text-gray-900 mb-4">Key Advantages</h3>
@@ -618,7 +618,7 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
             Start Protecting Your Garden Today
           </h2>
           <p className="text-xl text-green-100 mb-10">
-            Don&apos;t let deer destroy your hard work. Get professional-grade protection 
+            Don't let deer destroy your hard work. Get professional-grade protection 
             with our solar-powered ultrasonic deer repellent system.
           </p>
           

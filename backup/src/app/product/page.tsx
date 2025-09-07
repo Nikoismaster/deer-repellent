@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';import Image from 'next/image';
-import { Shield, Sun, Droplets, Volume2, Clock, CheckCircle, Star, Package, Zap } from 'lucide-react';
+import Image from 'next/image';
+import { Shield, Sun, Droplets, Volume2, Clock, CheckCircle, Star, ArrowRight, Package, Zap, Thermometer } from 'lucide-react';
 import CTAButton from '@/components/UI/CTAButton';
 
 export const metadata: Metadata = {
@@ -118,7 +118,7 @@ export default function ProductPage() {
       <div className="bg-gray-50 py-4">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="flex items-center space-x-2 text-sm text-gray-600">
-            <Link href="/" className="hover:text-green-600">Home</Link>
+            <a href="/" className="hover:text-green-600">Home</a>
             <span>/</span>
             <span className="text-gray-900">Product Details</span>
           </nav>

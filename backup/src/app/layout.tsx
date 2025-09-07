@@ -104,7 +104,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         {/* Tailwind CSS CDN */}
-        <script async src="https://cdn.tailwindcss.com"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
         
         {/* Additional meta tags */}
         <meta name="theme-color" content="#16a34a" />
