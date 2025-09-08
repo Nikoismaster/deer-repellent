@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
 import './globals.css';
+import Header from '@/components/Layout/Header';
+import Footer from '@/components/Layout/Footer';
 
 export const metadata: Metadata = {
   title: {
@@ -88,8 +90,12 @@ export default function RootLayout({
           `}
         </Script>
       </head>
-      <body>
-        {children}
+      <body className="min-h-screen flex flex-col bg-white text-gray-900">
+        <Header />
+        <main className="flex-grow">
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   )
