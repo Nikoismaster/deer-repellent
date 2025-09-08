@@ -6,51 +6,51 @@ export default function HomePage() {
   const features = [
     {
       icon: Volume2,
-      title: 'Ultrasonic Technology',
-      description: '25kHz frequency specifically designed to deter deer and other wildlife without disturbing humans or pets'
+      title: 'Advanced Ultrasonic Deer Repeller',
+      description: '25kHz frequency ultrasonic deer repellent technology specifically engineered to deter deer and wildlife without disturbing humans or pets'
     },
     {
       icon: Sun,
-      title: 'Solar Powered',
-      description: 'Eco-friendly solar panel with 2000mAh backup battery ensures 24/7 operation with zero electricity costs'
+      title: 'Solar-Powered Deer Repeller',
+      description: 'Eco-friendly solar deer repellent with 2000mAh backup battery ensures 24/7 deer repeller operation with zero electricity costs'
     },
     {
       icon: Droplets,
-      title: 'Weatherproof Design',
-      description: 'IP65 waterproof rating withstands rain, snow, and extreme weather conditions year-round'
+      title: 'Weatherproof Deer Repellent Design',
+      description: 'IP65 waterproof deer repeller rating withstands rain, snow, and extreme weather conditions for year-round deer repellent protection'
     },
     {
       icon: Shield,
-      title: 'Motion Activated',
-      description: 'PIR sensor detects movement up to 30 feet away with 110° detection angle for maximum coverage'
+      title: 'Motion-Activated Deer Repeller',
+      description: 'PIR sensor deer repellent detects movement up to 30 feet away with 110° detection angle for maximum deer repeller coverage'
     },
     {
       icon: Clock,
-      title: '24/7 Protection',
-      description: 'Works continuously day and night to protect your garden, lawn, and landscaping from deer damage'
+      title: '24/7 Deer Repellent Protection',
+      description: 'Continuous deer repeller operation day and night to protect your garden, lawn, and landscaping from deer damage'
     },
     {
       icon: CheckCircle,
-      title: 'Humane & Safe',
-      description: 'Completely safe for children, pets, and wildlife - just encourages deer to find food elsewhere'
+      title: 'Humane & Safe Deer Repeller',
+      description: 'Completely safe deer repellent for children, pets, and wildlife - our deer repeller simply encourages deer to find food elsewhere'
     }
   ];
 
   const workingProcess = [
     {
       step: '1',
-      title: 'Motion Detection',
-      description: 'PIR sensor detects deer movement within 30-foot radius'
+      title: 'Deer Detection',
+      description: 'Advanced PIR sensor in our deer repeller detects deer movement within 30-foot radius for instant deer repellent activation'
     },
     {
       step: '2', 
-      title: 'Instant Activation',
-      description: 'Device immediately emits 25kHz ultrasonic sound waves'
+      title: 'Instant Deer Repeller Activation',
+      description: 'Deer repellent device immediately emits 25kHz ultrasonic sound waves when deer approach the protected area'
     },
     {
       step: '3',
-      title: 'Deer Deterrence',
-      description: 'Uncomfortable frequency causes deer to leave the area immediately'
+      title: 'Effective Deer Deterrence',
+      description: 'Uncomfortable ultrasonic frequency from our deer repeller causes deer to leave the area immediately and naturally'
     }
   ];
 
@@ -59,21 +59,21 @@ export default function HomePage() {
       name: 'Sarah M.',
       location: 'Vermont',
       rating: 5,
-      comment: 'Finally! No more destroyed vegetables. This device saved my entire garden.',
+      comment: 'This deer repellent finally solved our problem! No more destroyed vegetables. Best deer repeller investment ever.',
       result: '95% reduction in deer damage'
     },
     {
       name: 'Mike R.',
       location: 'Colorado',
       rating: 5,
-      comment: 'Easy installation and it works exactly as advertised. Deer stay away now.',
+      comment: 'Easy deer repeller installation and it works exactly as advertised. This deer repellent keeps deer away consistently.',
       result: 'Complete protection for 3 months'
     },
     {
       name: 'Jennifer L.',
       location: 'Pennsylvania',
       rating: 5,
-      comment: 'Bought 2 units for my large property. Worth every penny for the peace of mind.',
+      comment: 'Bought 2 deer repeller units for my large property. This deer repellent system is worth every penny for peace of mind.',
       result: '100% deer-free zone'
     }
   ];
@@ -87,26 +87,27 @@ export default function HomePage() {
             <div className="order-2 lg:order-1">
               <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight">
                 Protect Your Garden{' '}
-                <span className="text-green-600">24/7</span> with Solar-Powered Deer Repellent
+                <span className="text-green-600">24/7</span> with Solar-Powered Deer Repellent & Deer Repeller
               </h1>
               <p className="text-lg sm:text-xl text-gray-700 mt-4 sm:mt-6 leading-relaxed">
-                Effective, humane & eco-friendly wildlife control. Our ultrasonic deer deterrent 
-                uses solar power and motion activation to keep deer away from your plants naturally.
+                Effective, humane & eco-friendly deer repellent technology. Our ultrasonic deer repeller 
+                uses solar power and motion activation to keep deer away from your plants naturally. 
+                The ultimate deer repellent solution for garden protection.
               </p>
               
               {/* Key Benefits */}
               <div className="mt-6 sm:mt-8 space-y-3">
                 <div className="flex items-center text-gray-700">
                   <CheckCircle className="h-5 w-5 text-green-600 mr-3 flex-shrink-0" />
-                  <span>95% Success Rate - Proven Effective</span>
+                  <span>95% Success Rate - Proven Effective Deer Repeller</span>
                 </div>
                 <div className="flex items-center text-gray-700">
                   <CheckCircle className="h-5 w-5 text-green-600 mr-3 flex-shrink-0" />
-                  <span>Solar Powered - Zero Operating Costs</span>
+                  <span>Solar Powered Deer Repellent - Zero Operating Costs</span>
                 </div>
                 <div className="flex items-center text-gray-700">
                   <CheckCircle className="h-5 w-5 text-green-600 mr-3 flex-shrink-0" />
-                  <span>Humane & Safe for Pets and Children</span>
+                  <span>Humane & Safe Deer Repeller for Pets and Children</span>
                 </div>
               </div>
 
@@ -124,10 +125,10 @@ export default function HomePage() {
                       <Star key={i} className="h-4 w-4 sm:h-5 sm:w-5 fill-current" />
                     ))}
                   </div>
-                  <span className="ml-2 text-gray-700 font-medium text-sm sm:text-base">4.8/5 (127+ Reviews)</span>
+                  <span className="ml-2 text-gray-700 font-medium text-sm sm:text-base">4.8/5 (127+ Deer Repellent Reviews)</span>
                 </div>
                 <div className="text-gray-700 text-sm sm:text-base">
-                  <span className="font-medium">Free USA Shipping</span>
+                  <span className="font-medium">Free USA Shipping on All Deer Repeller Orders</span>
                 </div>
               </div>
             </div>
@@ -137,9 +138,10 @@ export default function HomePage() {
                 {/* 主产品图片 */}
                 <img 
                   src="https://m.media-amazon.com/images/I/818jcIp9unL._AC_SL1500_.jpg"
-                  alt="Solar Powered Deer Repellent Device"
+                  alt="Solar Powered Deer Repellent and Deer Repeller Device for Garden Protection"
                   className="w-full h-auto rounded-2xl shadow-2xl"
-                />                <div className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 bg-white rounded-lg shadow-lg p-3 sm:p-4">
+                />                
+                <div className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 bg-white rounded-lg shadow-lg p-3 sm:p-4">
                   <div className="text-center">
                     <div className="text-xl sm:text-2xl font-bold text-green-600">30 Day</div>
                     <div className="text-xs sm:text-sm text-gray-700">Money Back Guarantee</div>
@@ -156,10 +158,10 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose Our Deer Repellent?
+              Why Choose Our Advanced Deer Repellent & Deer Repeller System?
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-              Advanced technology meets eco-friendly design for the most effective deer control solution
+              Advanced deer repeller technology meets eco-friendly design for the most effective deer repellent solution on the market
             </p>
           </div>
 
@@ -184,10 +186,10 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              How It Works
+              How Our Deer Repellent & Deer Repeller Technology Works
             </h2>
             <p className="text-lg sm:text-xl text-gray-600">
-              Simple 3-step process for effective deer deterrence
+              Simple 3-step process for effective deer repellent protection using advanced deer repeller technology
             </p>
           </div>
 
@@ -211,7 +213,7 @@ export default function HomePage() {
               href="/how-it-works"
               className="inline-flex items-center text-green-600 hover:text-green-700 font-semibold"
             >
-              Learn more about the technology
+              Learn more about our deer repellent and deer repeller technology
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </div>
@@ -224,42 +226,42 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-                Technical Specifications
+                Deer Repellent & Deer Repeller Technical Specifications
               </h2>
               <div className="space-y-4">
                 <div className="border-b border-gray-200 pb-4">
                   <div className="flex justify-between">
-                    <span className="font-medium text-gray-900">Ultrasonic Frequency</span>
+                    <span className="font-medium text-gray-900">Deer Repeller Ultrasonic Frequency</span>
                     <span className="text-gray-700">25kHz</span>
                   </div>
                 </div>
                 <div className="border-b border-gray-200 pb-4">
                   <div className="flex justify-between">
-                    <span className="font-medium text-gray-900">Detection Range</span>
+                    <span className="font-medium text-gray-900">Deer Repellent Detection Range</span>
                     <span className="text-gray-700">30 feet (9 meters)</span>
                   </div>
                 </div>
                 <div className="border-b border-gray-200 pb-4">
                   <div className="flex justify-between">
-                    <span className="font-medium text-gray-900">Detection Angle</span>
+                    <span className="font-medium text-gray-900">Deer Repeller Detection Angle</span>
                     <span className="text-gray-700">110 degrees</span>
                   </div>
                 </div>
                 <div className="border-b border-gray-200 pb-4">
                   <div className="flex justify-between">
-                    <span className="font-medium text-gray-900">Waterproof Rating</span>
+                    <span className="font-medium text-gray-900">Deer Repellent Waterproof Rating</span>
                     <span className="text-gray-700">IP65</span>
                   </div>
                 </div>
                 <div className="border-b border-gray-200 pb-4">
                   <div className="flex justify-between">
-                    <span className="font-medium text-gray-900">Power Source</span>
+                    <span className="font-medium text-gray-900">Deer Repeller Power Source</span>
                     <span className="text-gray-700">Solar + 2000mAh Battery</span>
                   </div>
                 </div>
                 <div className="border-b border-gray-200 pb-4">
                   <div className="flex justify-between">
-                    <span className="font-medium text-gray-900">Working Modes</span>
+                    <span className="font-medium text-gray-900">Deer Repellent Working Modes</span>
                     <span className="text-gray-700">5 Adjustable Settings</span>
                   </div>
                 </div>
@@ -270,7 +272,7 @@ export default function HomePage() {
                   href="/product"
                   className="inline-flex items-center text-green-600 hover:text-green-700 font-semibold"
                 >
-                  View detailed product specifications
+                  View detailed deer repeller and deer repellent specifications
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </div>
@@ -281,7 +283,7 @@ export default function HomePage() {
               <div className="relative w-full max-w-md sm:max-w-lg mx-auto rounded-2xl overflow-hidden shadow-lg bg-white p-4">
                 <img 
                   src="https://m.media-amazon.com/images/I/81421IaGHiL._AC_SL1500_.jpg"
-                  alt="Deer Repellent Technical Specifications and Components"
+                  alt="Deer Repellent and Deer Repeller Technical Specifications and Components Diagram"
                   className="w-full h-auto object-contain"
                   loading="lazy"
                 />
@@ -296,10 +298,10 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Real Results from Real Customers
+              Real Results from Real Deer Repellent & Deer Repeller Customers
             </h2>
             <p className="text-lg sm:text-xl text-gray-600">
-              Join thousands of satisfied gardeners who protect their plants with our deer repellent
+              Join thousands of satisfied gardeners who protect their plants with our proven deer repellent and deer repeller system
             </p>
           </div>
 
@@ -330,7 +332,7 @@ export default function HomePage() {
               href="/success-stories"
               className="inline-flex items-center text-green-600 hover:text-green-700 font-semibold"
             >
-              Read more success stories
+              Read more deer repellent and deer repeller success stories
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </div>
@@ -341,11 +343,11 @@ export default function HomePage() {
       <section className="py-12 sm:py-20 bg-green-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-6">
-            Ready to Protect Your Garden?
+            Ready to Protect Your Garden with Our Deer Repellent & Deer Repeller?
           </h2>
           <p className="text-lg sm:text-xl text-green-100 mb-8 sm:mb-10">
-            Join thousands of satisfied customers and start protecting your garden today. 
-            30-day money-back guarantee and free shipping included.
+            Join thousands of satisfied customers and start protecting your garden today with our proven deer repellent technology. 
+            30-day money-back guarantee and free shipping included on every deer repeller order.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
@@ -363,7 +365,7 @@ export default function HomePage() {
 
           <div className="mt-6 sm:mt-8 text-green-100">
             <p className="text-xs sm:text-sm">
-              ✓ Free USA Shipping • ✓ 30-Day Money Back Guarantee • ✓ 24/7 Customer Support
+              ✓ Free USA Shipping on All Deer Repeller Orders • ✓ 30-Day Money Back Guarantee • ✓ 24/7 Deer Repellent Customer Support
             </p>
           </div>
         </div>
