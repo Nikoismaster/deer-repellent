@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Calendar, Clock, User, ArrowLeft, ArrowRight, Tag, Share2 } from 'lucide-react';
@@ -1132,6 +1133,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: `${article.title} | DeerRepellent.store Blog`,
     description: article.excerpt,
     keywords: article.tags,
+    alternates: {
+      canonical: `/blog/${article.id}`,
+    },
     openGraph: {
       title: article.title,
       description: article.excerpt,
@@ -1188,6 +1192,30 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
 
   return (
     <div className="min-h-screen bg-white">
+      {/* JSON-LD Article schema for SEO */}
+      <Script id="article-jsonld" type="application/ld+json">
+        {JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'Article',
+          headline: article.title,
+          description: article.excerpt,
+          datePublished: article.publishDate,
+          author: { '@type': 'Person', name: article.author },
+          image: [article.image],
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': `${process.env.NEXT_PUBLIC_SITE_URL || 'https://deerrepellent.store'}/blog/${article.id}`,
+          },
+          publisher: {
+            '@type': 'Organization',
+            name: 'DeerRepellent.store',
+            logo: {
+              '@type': 'ImageObject',
+              url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://deerrepellent.store'}/images/og-image.jpg`,
+            },
+          },
+        })}
+      </Script>
       {/* Breadcrumb */}
       <div className="bg-gray-50 py-4">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1432,4 +1460,17 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
       </section>
     </div>
   );
+}
+
+// Pre-generate article pages for better SEO and performance
+export function generateStaticParams() {
+  return [
+    { slug: 'ultimate-guide-deer-control' },
+    { slug: 'deer-feeding-patterns' },
+    { slug: 'solar-deer-repellent-vs-battery' },
+    { slug: 'deer-resistant-plants' },
+    { slug: 'winter-deer-damage-prevention' },
+    { slug: 'ultrasonic-frequency-explained' },
+    { slug: 'garden-damage-assessment' },
+  ]
 }

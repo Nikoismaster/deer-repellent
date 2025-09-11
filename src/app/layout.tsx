@@ -66,6 +66,10 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  // Enable Google Search Console verification via env var
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION as string | undefined,
+  },
 };
 
 export default function RootLayout({
